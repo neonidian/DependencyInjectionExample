@@ -5,6 +5,7 @@ namespace DependencyInjectionExample.ConstructorInjection.Injectors
 {
     public class CatServiceInjector : IAnimalServiceInjector
     {
-        public PetOrWildAnimal AnimalConsumer() => new PetOrWildAnimal(new Cat());
+        public PetOrWildAnimal PetOrWildAnimal() => new PetOrWildAnimal(new Cat());
+        public AnimalSound AnimalSound() => new AnimalSound(new Cat());
     }
 }

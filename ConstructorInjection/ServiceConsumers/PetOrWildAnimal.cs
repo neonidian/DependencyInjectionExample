@@ -11,13 +11,12 @@ namespace DependencyInjectionExample.ConstructorInjection.ServiceConsumers
             _animal = animal;
         }
 
-        public string AnimalCharacteristics()
+        public string PrintPetOrWildAnimal()
         {
             string nameOfAnimal = _animal.NameOfAnimal();
-            string sound = _animal.Sound();
             string petOrWildAnimal = _animal.IsPetAnimal() ? "pet" : "wild";
 
-            return ($"The '{nameOfAnimal}' is a {petOrWildAnimal} animal and makes a sound - {sound}");
+            return ($"The '{nameOfAnimal}' is a {petOrWildAnimal} animal.");
         }
     }
 }

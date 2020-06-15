@@ -4,6 +4,8 @@ namespace DependencyInjectionExample.ConstructorInjection.Injectors
 {
     public interface IAnimalServiceInjector
     {
-        PetOrWildAnimal AnimalConsumer();
+        PetOrWildAnimal PetOrWildAnimal();
+
+        AnimalSound AnimalSound();
     }
 }

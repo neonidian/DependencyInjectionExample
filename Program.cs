@@ -14,23 +14,27 @@ namespace DependencyInjectionExample
         private static void ConstructorInjection()
         {
             IAnimalServiceInjector animalServiceInjector; 
-            PetOrWildAnimal animalConsumer;
-
+            PetOrWildAnimal petOrWildAnimal;
+            AnimalSound animalSound;
+            
             Console.WriteLine("------------CONSTRUCTOR INJECTION------------");
             // Dog
             animalServiceInjector = new DogServiceInjector();
-            animalConsumer = animalServiceInjector.AnimalConsumer();
-            Console.WriteLine(animalConsumer.AnimalCharacteristics());
+            petOrWildAnimal = animalServiceInjector.PetOrWildAnimal();
+            animalSound = animalServiceInjector.AnimalSound();
+            Console.WriteLine(petOrWildAnimal.PrintPetOrWildAnimal() + " " + animalSound.SoundFromAnimal());
 
             // Tiger
             animalServiceInjector = new TigerServiceInjector();
-            animalConsumer = animalServiceInjector.AnimalConsumer();
-            Console.WriteLine(animalConsumer.AnimalCharacteristics());
+            petOrWildAnimal = animalServiceInjector.PetOrWildAnimal();
+            animalSound = animalServiceInjector.AnimalSound();
+            Console.WriteLine(petOrWildAnimal.PrintPetOrWildAnimal() + " " + animalSound.SoundFromAnimal());
 
             // Cat
             animalServiceInjector = new CatServiceInjector();
-            animalConsumer = animalServiceInjector.AnimalConsumer();
-            Console.WriteLine(animalConsumer.AnimalCharacteristics());
+            petOrWildAnimal = animalServiceInjector.PetOrWildAnimal();
+            animalSound = animalServiceInjector.AnimalSound();
+            Console.WriteLine(petOrWildAnimal.PrintPetOrWildAnimal() + " " + animalSound.SoundFromAnimal());
             
             Console.WriteLine("---------------------------------------------");
             Console.WriteLine();
