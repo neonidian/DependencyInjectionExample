@@ -2,7 +2,7 @@
 
 namespace DependencyInjectionExample.ConstructorInjection.ServiceConsumers
 {
-    public class PetOrWildAnimal : IAnimalConsumer
+    public class PetOrWildAnimal
     {
         private readonly IAnimal _animal;
 
@@ -15,9 +15,9 @@ namespace DependencyInjectionExample.ConstructorInjection.ServiceConsumers
         {
             string nameOfAnimal = _animal.NameOfAnimal();
             string sound = _animal.Sound();
-            string isPetOrWildAnimal = _animal.IsPetAnimal() ? "pet" : "wild";
+            string petOrWildAnimal = _animal.IsPetAnimal() ? "pet" : "wild";
 
-            return ($"The '{nameOfAnimal}' is a {isPetOrWildAnimal} animal and makes a sound - {sound}");
+            return ($"The '{nameOfAnimal}' is a {petOrWildAnimal} animal and makes a sound - {sound}");
         }
     }
 }
