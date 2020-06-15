@@ -5,5 +5,7 @@
         bool IsPetAnimal();
 
         string Sound();
+
+        string NameOfAnimal();
     }
 }

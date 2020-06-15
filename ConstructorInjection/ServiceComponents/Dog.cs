@@ -5,5 +5,7 @@
         public bool IsPetAnimal() => true;
 
         public string Sound() => "bark";
+        
+        public string NameOfAnimal() => "dog";
     }
 }
