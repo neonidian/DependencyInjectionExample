@@ -1,6 +1,6 @@
 ﻿# Dependency Injection with C#
 
-Dependency injection is a design pattern where an object supplies dependencies for another object. This makes the application loosely coupled
+Dependency injection is a design pattern to achieve [Inversion of Control(IoC)](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles#dependency-inversion) where an object supplies dependencies for another object by making use of interfaces. This makes the application loosely coupled
 and enables easier maintenance.
 
 ### Dependency injection techniques
